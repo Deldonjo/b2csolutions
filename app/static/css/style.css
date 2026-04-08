@@ -85,10 +85,10 @@
 /* ---------------------------- */
 :root {
     --primary: #F4F4F4;
-    --text-color: #004551;
-    --text-color-2: #5A5A5A;
+    --text-color: #04526F;
+    --text-color-2: #878787;
     --background-color: #FEFEFE;
-    --accent-color: #FF9700;
+    --accent-color: #878787;
     --accent-color-2: #8E8E8E;
     --accent-color-3: #D9EAED;
     --accent-color-4: #C8E1E5;
@@ -787,7 +787,7 @@ img {
 }
 
 .custom-scrollbar .swiper-scrollbar-drag {
-    background: #ff9800;
+    background: #878787;
     border-radius: 10px;
 }
 
@@ -912,7 +912,7 @@ a {
 }
 
 .link {
-    color: var(--primary);
+    color: var(--text-color);
 }
 
 .link:hover {

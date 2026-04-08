@@ -20,7 +20,7 @@
             <nav class="navbar navbar-expand-xl">
                 <div class="container-fluid ps-3">
                     <div class="logo-container">
-                        <a class="navbar-brand" href="#"><img src="image/logo.png" alt="" class="img-fluid"></a>
+                        <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='images/B2C-logo.png') }}" alt="" class="img-fluid"></a>
                     </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,51 +29,28 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto mb-2 mb-xl-0 gap-xl-4 gap-1">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Homepage</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    About
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
-                                    <li><a class="dropdown-item" href="team.html">Team</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Services
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="services.html">Services</a></li>
-                                    <li><a class="dropdown-item" href="service_detail.html">Service Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Pages
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="faq.html">FAQs</a></li>
-                                    <li><a class="dropdown-item" href="member.html">Membership</a></li>
-                                    <li><a class="dropdown-item" href="testimonial.html">Testimonials</a></li>
-                                    <li><a class="dropdown-item" href="404.html">404 Error</a></li>
-                                    <li><a class="dropdown-item" href="location.html">Detail Location</a></li>
-                                    <li><a class="dropdown-item" href="blog.html">Last Article</a></li>
-                                    <li><a class="dropdown-item" href="single_blog.html">Single Post</a></li>
-                                </ul>
+                                <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact Us</a>
+                                <a class="nav-link" href="about.html">A propos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contactez nous</a>
                             </li>
                         </ul>
                         <div class="mb-xl-0 mb-3">
                             <a href="contact.html"
                                 class="btn btn-accent-outline d-flex flex-row rounded-pill gap-2 px-4 py-2">
-                                <span>Get Started</span>
+                                <span>Commencer</span>
                             </a>
                         </div>
                     </div>
@@ -84,19 +61,19 @@
     <!-- End Header -->
 
   <!-- MAIN CONTENT -->
-  <main class="container my-5">
+  <main>
     {% block content %}{% endblock %}
   </main>
 
  <!-- FOOTER -->
 <footer>
     <div class="section py-5">
-        <div class="d-flex flex-column gap-3 p-5 bg-text-color rounded-4 text-white">
+        <div class="d-flex flex-column gap-3 p-5 bg-accent-primary rounded-4">
             <div class="row row-cols-xl-2 row-cols-1 align-items-center">
                 <div class="col col-xl-8 mb-3">
                     <div class="d-flex flex-column gap-5">
-                        <img src="image/logo-white.png" alt="" class="img-fluid" width="350">
-                        <p class="text-white" style="max-width: 550px;">
+                        <img src="{{ url_for('static', filename='images/logo-white.png') }}" alt="" class="img-fluid" width="350">
+                        <p class="text-color" style="max-width: 550px;">
                             At our pharmaacy, we are dedicated to providing top-notch healthcare solutions with a
                             focus on quality, safety, and personalized care.
                         </p>
@@ -106,10 +83,10 @@
                     <div class="row row-cols-xl-2 row-cols-1">
                         <div class="co mb-3">
                             <div class="d-flex flex-column gap-3">
-                                <h4>Address</h4>
+                                <h4>Adresse</h4>
                                 <div class="d-flex flex-row font-2 gap-3" style="max-width: 250px;">
                                     <i class="rtmicon rtmicon-location fs-4"></i>
-                                    <span>KLLG st, No.99, Pku City, ID 28289</span>
+                                    <span>45, rue Pouget, Morne Calvaire, Pétion ville</span>
                                 </div>
                                 <div class="social-container team mb-xl-0 mb-3 gap-2">
                                     <a href="https://www.facebook.com" class="social-item-3">
@@ -129,11 +106,11 @@
                         </div>
                         <div class="col mb-3">
                             <div class="d-flex flex-column gap-3">
-                                <h4>Contact Us</h4>
+                                <h4>Contactez nous</h4>
                                 <div class="d-flex flex-column gap-3">
                                     <div class="d-flex flex-row align-items-center font-2 gap-3">
                                         <i class="rtmicon rtmicon-classic-phone  fs-4"></i>
-                                        <span>0761-8523-398</span>
+                                        <span>+509 31 14 3113</span>
                                     </div>
                                     <div class="d-flex flex-row align-items-center font-2 gap-3">
                                         <i class="rtmicon rtmicon-envelope fs-4"></i>
@@ -145,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="border-1 border-light" style="opacity: 1;">
+            <hr class="border-1 border-text-color" style="opacity: 1;">
             <div class="d-flex flex-row gap-2 align-items-center justify-content-between">
                 <div class="d-flex flex-xl-row flex-column gap-5">
                     <div>
@@ -169,7 +146,7 @@
                         </a>
                     </div>
                 </div>
-                <span class="text-white fs-6 font-2">
+                <span class="text-color fs-6 font-2">
                     Copyright © 2026 B2C Solutions. Tous droits réservés.
                 </span>
             </div>
