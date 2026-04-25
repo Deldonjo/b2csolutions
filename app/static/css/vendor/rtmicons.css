@@ -24,7 +24,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.rtmicon.rtmicon-handshake:before {
+  content: "\ea94";
+}
+.rtmicon.rtmicon-headset:before {
+  content: "\ea95";
+}
 .rtmicon.rtmicon-accordion:before {
   content: "\e900";
 }
